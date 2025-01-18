@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="hero">
+    <div class="hero-content">
+        <h1>Genomics Training Program</h1>
+        <h2>GTP 2025</h2>
+        <h3>IIIT Hyderabad, India</h3>
+        <p>March 12-15, 2025</p>
+        <a href="{{ url_for('registration') }}" class="cta-button">Register Now</a>
+    </div>
+</div>
+
+<section class="about container">
+    <h2>About GTP</h2>
+    <p>The Genomics Training Program (GTP) 2025 is an intensive, four-day workshop designed to equip faculty members and research scholars with cutting-edge knowledge and skills in genomics. Led by subject field experts, this program offers a unique opportunity to delve into the latest advancements, techniques, and applications in genomic research.</p>
+</section>
+
+<section class="topics container">
+    <h2>Topics of Interest</h2>
+    <div class="topic-grid">
+        <div class="topic-item"><i class="fas fa-chart-bar"></i> Biological big data analytics</div>
+        <div class="topic-item"><i class="fas fa-dna"></i> Genome analysis</div>
+        <div class="topic-item"><i class="fas fa-laptop-code"></i> Computational proteomics</div>
+        <div class="topic-item"><i class="fas fa-brain"></i> Health informatics</div>
+        <div class="topic-item"><i class="fas fa-microscope"></i> Molecular evolution</div>
+        <div class="topic-item"><i class="fas fa-project-diagram"></i> Structural bioinformatics</div>
+        <div class="topic-item"><i class="fas fa-dna"></i> Transcriptomics</div>
+        <div class="topic-item"><i class="fas fa-database"></i> Databases and ontologies</div>
+    </div>
+    <p>And many more cutting-edge topics in computational biology and medical sciences.</p>
+</section>
+
+<section class="why-attend container">
+    <h2>Why Attend GTP 2025?</h2>
+    <ul>
+        <li>Learn from world-renowned experts in genomics</li>
+        <li>Gain hands-on experience with state-of-the-art genomic technologies</li>
+        <li>Network with peers and leaders in the field</li>
+        <li>Explore the latest trends and future directions in genomic research</li>
+        <li>Enhance your teaching and research capabilities in genomics</li>
+    </ul>
+</section>
+
+<section class="who-should-attend container">
+    <h2>Who Should Attend</h2>
+    <ul>
+        <li>Faculty members in life sciences, biotechnology, and related fields</li>
+        <li>Postdoctoral researchers and senior PhD scholars</li>
+        <li>Professionals in genomics and bioinformatics</li>
+    </ul>
+</section>
+
+<section class="cta container">
+    <h2>Join Us at GTP 2025</h2>
+    <p>Be part of this exciting gathering of minds at the forefront of computational advances in bio and medical sciences.</p>
+    <a href="{{ url_for('registration') }}" class="cta-button">Register Now</a>
+</section>
+{% endblock %}
