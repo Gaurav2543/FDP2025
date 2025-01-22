@@ -17,13 +17,6 @@ const schedule = [
     { date: "July 15, 2025", course: "Genome Assembly and Annotation", instructor: "Prof. Michael Johnson" }
 ];
 
-const hamburger = document.querySelector('.hamburger');
-const navMenu = document.querySelector('.nav-menu');
-
-hamburger.addEventListener('click', () => {
-  navMenu.classList.toggle('active');
-});
-
 // Function to populate the course list
 function populateCourses() {
     const courseList = document.getElementById('course-list');
@@ -65,9 +58,48 @@ function handleFormSubmit(event) {
     alert("Thank you for your message. We will get back to you soon!");
 }
 
-document.querySelector('.dropbtn').addEventListener('click', function() {
-    this.nextElementSibling.style.display = 
-        this.nextElementSibling.style.display === 'block' ? 'none' : 'block';
+// Dropdown menu functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const dropBtn = document.querySelector('.dropbtn');
+    const dropdownContent = document.querySelector('.dropdown-content');
+    
+    if (dropBtn && dropdownContent) {
+        dropBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            
+            // Toggle the show class
+            dropdownContent.classList.toggle('show');
+            
+            // Update button text
+            this.innerHTML = dropdownContent.classList.contains('show') ? 'Menu ▼' : 'Menu ▲';
+        });
+    }
+
+    // Close dropdown when clicking outside
+    window.addEventListener('click', function(e) {
+        if (!e.target.matches('.dropbtn') && !e.target.matches('.dropdown-content') && !e.target.matches('.dropdown-content *')) {
+            if (dropdownContent && dropdownContent.classList.contains('show')) {
+                dropdownContent.classList.remove('show');
+                if (dropBtn) {
+                    dropBtn.innerHTML = 'Menu ▲';
+                }
+            }
+        }
+    });
+
+    // Keep these if you're using them
+    if (typeof populateCourses === 'function') {
+        populateCourses();
+    }
+    if (typeof populateSchedule === 'function') {
+        populateSchedule();
+    }
+    
+    const contactForm = document.getElementById('contact-form');
+    if (contactForm) {
+        contactForm.addEventListener('submit', handleFormSubmit);
+    }
 });
 
 // Call the functions when the page loads
