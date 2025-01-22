@@ -15,26 +15,18 @@
                 <div class="dropdown">
                     <button class="dropbtn">Menu ▼</button>
                     <div class="dropdown-content">
-                        <a href="#">Keynote Speakers</a>
-                        <a href="#">Workshops</a>
-                        <a href="#">Venue</a>
-                        <a href="#">Registration</a>
-                        <a href="#">Contact</a>
-                        <!-- Add other menu items here -->
+                        <ul>
+                            <li><a href="{{ url_for('home') }}"><i class="fas fa-home"></i> Home</a></li>
+                            <li><a href="{{ url_for('program') }}"><i class="fas fa-calendar-alt"></i> Program</a></li>
+                            <li><a href="{{ url_for('keynote_speakers') }}"><i class="fas fa-microphone"></i> Keynote Speakers</a></li>
+                            <li><a href="{{ url_for('workshops') }}"><i class="fas fa-users"></i> Workshops</a></li>
+                            <li><a href="{{ url_for('venue') }}"><i class="fas fa-map-marker-alt"></i> Venue</a></li>
+                            <li><a href="{{ url_for('registration') }}"><i class="fas fa-user-plus"></i> Registration</a></li>
+                            <li><a href="{{ url_for('committees') }}"><i class="fas fa-users-cog"></i> Committees</a></li>
+                            <li><a href="{{ url_for('contact') }}"><i class="fas fa-envelope"></i> Contact Us</a></li>
+                        </ul>
                     </div>
                 </div>
-            </nav>
-            <nav>
-                <ul>
-                    <li><a href="{{ url_for('home') }}"><i class="fas fa-home"></i> Home</a></li>
-                    <li><a href="{{ url_for('program') }}"><i class="fas fa-calendar-alt"></i> Program</a></li>
-                    <li><a href="{{ url_for('keynote_speakers') }}"><i class="fas fa-microphone"></i> Keynote Speakers</a></li>
-                    <li><a href="{{ url_for('workshops') }}"><i class="fas fa-users"></i> Workshops</a></li>
-                    <li><a href="{{ url_for('venue') }}"><i class="fas fa-map-marker-alt"></i> Venue</a></li>
-                    <li><a href="{{ url_for('registration') }}"><i class="fas fa-user-plus"></i> Registration</a></li>
-                    <li><a href="{{ url_for('committees') }}"><i class="fas fa-users-cog"></i> Committees</a></li>
-                    <li><a href="{{ url_for('contact') }}"><i class="fas fa-envelope"></i> Contact Us</a></li>
-                </ul>
             </nav>
         </div>
     </header>
