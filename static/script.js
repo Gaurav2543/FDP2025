@@ -65,6 +65,11 @@ function handleFormSubmit(event) {
     alert("Thank you for your message. We will get back to you soon!");
 }
 
+document.querySelector('.dropbtn').addEventListener('click', function() {
+    this.nextElementSibling.style.display = 
+        this.nextElementSibling.style.display === 'block' ? 'none' : 'block';
+});
+
 // Call the functions when the page loads
 window.onload = () => {
     populateCourses();
