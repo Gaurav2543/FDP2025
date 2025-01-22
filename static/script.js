@@ -17,6 +17,13 @@ const schedule = [
     { date: "July 15, 2025", course: "Genome Assembly and Annotation", instructor: "Prof. Michael Johnson" }
 ];
 
+const hamburger = document.querySelector('.hamburger');
+const navMenu = document.querySelector('.nav-menu');
+
+hamburger.addEventListener('click', () => {
+  navMenu.classList.toggle('active');
+});
+
 // Function to populate the course list
 function populateCourses() {
     const courseList = document.getElementById('course-list');
