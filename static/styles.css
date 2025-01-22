@@ -208,4 +208,26 @@ footer .container {
     .hero h3 {
         font-size: 1.2rem;
     }
+    .nav-menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: #35424a;
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
 }
