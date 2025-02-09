@@ -6,21 +6,17 @@ app = Flask(__name__)
 def home():
     return render_template('home.html')
 
-@app.route('/program')
+@app.route('/about')
 def program():
-    return render_template('program.html')
+    return render_template('about.html')
 
 @app.route('/keynote-speakers')
 def keynote_speakers():
     return render_template('keynote_speakers.html')
 
-@app.route('/workshops')
+@app.route('/program-schedule')
 def workshops():
-    return render_template('workshops.html')
-
-@app.route('/venue')
-def venue():
-    return render_template('venue.html')
+    return render_template('program_schedule.html')
 
 @app.route('/registration')
 def registration():
