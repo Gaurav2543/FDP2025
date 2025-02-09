@@ -68,7 +68,7 @@ nav ul li a:hover {
 }
 
 .hero {
-    background-image: url('https://source.unsplash.com/1600x900/?dna,science');
+    background-image: url('../static/FDP_website_bg.jpeg');
     background-size: cover;
     background-position: center;
     height: 100vh;
