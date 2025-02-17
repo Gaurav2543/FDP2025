@@ -3,7 +3,7 @@
 {% block content %}
 <div class="hero">
     <div class="hero-content">
-        <h1>Workshops</h1>
+        <h1>Program Schedule</h1>
         <h2>Faculty Development Program 2025</h2>
         <h2>Computational Genomics: Path to Precision Medicine</h2>
         <h3>March 24-28, 2025</h3>
@@ -11,7 +11,7 @@
 </div>
 
 <section class="workshops container">
-    <h2>Faculty Development Program on Computational Genomics: Path to Precision Medicine</h2>
+    <h2>Program Schedule</h2>
     <div class="workshop-list">
         <div class="workshop-item">
             <h3>Artificial Intelligence (AI), Application in Clinical Genomics and Diagnostics</h3>
@@ -19,6 +19,7 @@
                 Director, Molecular Diagnostics, 
                 New York Genome Center</p>
         </div>
+        <br>
 
         <div class="workshop-item">
             <h3>Investigating the genomics and epigenomics landscape in pediatric population using novel genomic techniques.</h3>
@@ -27,6 +28,7 @@
                 Washington, D.C., USA
                 </p>
         </div>
+        <br>
 
         <div class="workshop-item">
             <h3>AI methods applied to DNA-shape based analysis of genomes</h3>
@@ -35,6 +37,7 @@
                 JNU, New Delhi                
                 </p>
         </div>
+        <br>
 
         <div class="workshop-item">
             <h3>Meta genomics and human health </h3>
@@ -44,6 +47,7 @@
                 TCS-Research, Pune
                 </p>
         </div>
+        <br>
 
         <div class="workshop-item">
             <h3>Pharmaco-Genomics and the AI-powered Future for Personalized Treatment </h3>
@@ -53,6 +57,7 @@
                 TCS-Research
                 </p>
         </div>
+        <br>
 
         <div class="workshop-item">
             <h3>Harnessing the power of OMICS in public health </h3>
@@ -60,6 +65,7 @@
                 Chief Scientific Officer, 
                 PDxRL, Kolkata</p>
         </div>
+        <br>
 
         <div class="workshop-item">
             <h3>Emerging Landscapes of NGS based Molecular Diagnostics </h3>
@@ -68,6 +74,7 @@
                 Strand Life Sciences, Bangalore 
                 </p>
         </div>
+        <br>
 
         <div class="workshop-item">
             <h3>Cancer Genomics: Analyzing the Role of Genetic Variations in Tumorigenesis </h3>
@@ -77,6 +84,7 @@
                 IIIT Hyderabad 
                 </p>
         </div>
+        <br>
 
         <div class="workshop-item">
             <h3>Integrative bioinformatics for understanding variation in human cardiorespiratory fitness</h3>
@@ -85,6 +93,7 @@
                 Bioinformatics and Computational Biology Pennington Biomedical Research Center, USA
                 </p>
         </div>
+        <br>
 
         <div class="workshop-item">
             <h3>To be Announced</h3>
@@ -94,6 +103,9 @@
                 Medical College, Kolkata
                 </p>
         </div>
+        <br>
     </div>
+    <a href="{{ url_for('download_file', filename='Topics.docx') }}" class="cta-button">Download Program Schedule</a>
 </section>
+
 {% endblock %}
