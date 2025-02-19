@@ -58,56 +58,26 @@ function handleFormSubmit(event) {
     alert("Thank you for your message. We will get back to you soon!");
 }
 
-// Dropdown menu functionality
-document.addEventListener('DOMContentLoaded', function() {
-    const dropBtn = document.querySelector('.dropbtn');
-    const dropdownContent = document.querySelector('.dropdown-content');
-    
-    if (dropBtn && dropdownContent) {
-        dropBtn.addEventListener('click', function(e) {
-            e.preventDefault();
-            e.stopPropagation();
-            
-            // Toggle the show class
-            dropdownContent.classList.toggle('show');
-            
-            // Update button text
-            this.innerHTML = dropdownContent.classList.contains('show') ? 'Menu ▼' : 'Menu ▲';
-        });
-    }
+// Function to toggle downloads dropdown
+function toggleDownloads(event) {
+    event.preventDefault(); 
+    const dropdownContent = document.getElementById('downloadsDropdown');
+    dropdownContent.classList.toggle('show');
+}
 
-    // Close dropdown when clicking outside
-    window.addEventListener('click', function(e) {
-        if (!e.target.matches('.dropbtn') && !e.target.matches('.dropdown-content') && !e.target.matches('.dropdown-content *')) {
-            if (dropdownContent && dropdownContent.classList.contains('show')) {
-                dropdownContent.classList.remove('show');
-                if (dropBtn) {
-                    dropBtn.innerHTML = 'Menu ▲';
-                }
-            }
-        }
-    });
+// Ensure dropdown stays open when clicked inside
+document.addEventListener('click', function(event) {
+    const dropdown = document.getElementById('downloadsDropdown');
+    const downloadsToggle = document.getElementById('downloadsToggle');
 
-    // Keep these if you're using them
-    if (typeof populateCourses === 'function') {
-        populateCourses();
-    }
-    if (typeof populateSchedule === 'function') {
-        populateSchedule();
-    }
-    
-    const contactForm = document.getElementById('contact-form');
-    if (contactForm) {
-        contactForm.addEventListener('submit', handleFormSubmit);
+    if (!dropdown.contains(event.target) && !downloadsToggle.contains(event.target)) {
+        dropdown.classList.remove('show');
     }
 });
 
-// Call the functions when the page loads
+// Call functions when the page loads
 window.onload = () => {
     populateCourses();
     populateSchedule();
-    
-    // Add event listener for form submission
-    const contactForm = document.getElementById('contact-form');
-    contactForm.addEventListener('submit', handleFormSubmit);
 };
+

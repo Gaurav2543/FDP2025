@@ -1,57 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}FDP 2025{% endblock %}</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{% block title %}FDP 2025{% endblock %}</title>
+
+  <!-- Font Awesome Icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
+
+  <!-- Main CSS -->
+  <link
+    rel="stylesheet"
+    href="{{ url_for('static', filename='styles.css') }}"
+  />
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1><i class="fas fa-dna"></i> Faculty Development Program 2025</h1>
-            <nav>
-                <!-- Regular navigation menu -->
-                <ul>
-                    <li><a href="/"><i class="fas fa-home"></i> Home</a></li>
-                    <li><a href="/keynote-speakers"><i class="fas fa-microphone"></i> Resource Persons</a></li>
-                    <li><a href="/program-schedule"><i class="fas fa-users"></i> Program Schedule</a></li>
-                    <li><a href="/registration"><i class="fas fa-user-plus"></i> Registration</a></li>
-                    <li><a href="/committees"><i class="fas fa-users-cog"></i> Committee</a></li>
-                    <li><a href="/contact"><i class="fas fa-envelope"></i> Contact Us</a></li>
-                </ul>
-                
-                <!-- Mobile dropdown menu -->
-                <div class="dropdown">
-                    <button class="dropbtn">Menu <p><i class="arrow down"></i></p></button>
-                    <div class="dropdown-content">
-                        <a href="/"><i class="fas fa-home"></i> Home</a>
-                        <a href="/keynote-speakers"><i class="fas fa-microphone"></i> Resource Persons</a>
-                        <a href="/program-schedule"><i class="fas fa-users"></i> Program Schedule</a>
-                        <a href="/registration"><i class="fas fa-user-plus"></i> Registration</a>
-                        <a href="/committees"><i class="fas fa-users-cog"></i> Committee</a>
-                        <a href="/contact"><i class="fas fa-envelope"></i> Contact Us</a>
-                    </div>
-                </div>
-            </nav>
-        </div>
-    </header>
-    <main>
-        {% block content %}{% endblock %}
-    </main>
+  <header>
+    <!-- Header Content Wrapper (For larger margins) -->
+    <div class="header-content">
+      <!-- Left Logo -->
+      <img
+        src="{{ url_for('static', filename='images/iiit_hyderabad_logo.png') }}"
+        alt="IIIT Hyderabad Logo"
+        class="left-logo"
+      />
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 FDP. All rights reserved.</p>
-            <div class="social-icons">
-                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-                <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
-                <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
-            </div>
-        </div>
-    </footer>
+      <!-- MOBILE MENU ICON -->
+      <div class="mobile-menu-icon" onclick="toggleMobileNav()">
+        <i class="fas fa-bars"></i>
+      </div>
 
-    <script src="{{ url_for('static', filename='script.js') }}"></script>
+      <!-- NAVIGATION -->
+      <nav id="nav-menu">
+        <ul class="nav-menu">
+          <li>
+            <a href="/"><i class="fas fa-home"></i> Home</a>
+          </li>
+          <li>
+            <a href="/keynote-speakers"><i class="fas fa-microphone"></i> Resource Persons</a>
+          </li>
+          <li>
+            <a href="/program-schedule"><i class="fas fa-calendar-alt"></i> Program Schedule</a>
+          </li>
+          <li>
+            <a href="/registration"><i class="fas fa-user-plus"></i> Registration</a>
+          </li>
+          <li>
+            <a href="/committees"><i class="fas fa-users-cog"></i> Committee</a>
+          </li>
+          <li>
+            <a href="/contact"><i class="fas fa-envelope"></i> Contact Us</a>
+          </li>
+
+          <!-- Downloads Dropdown -->
+          <li class="downloads-dropdown">
+            <a
+              href="#"
+              id="downloadsToggle"
+              onclick="toggleDownloads(event)"
+            >
+              <i class="fas fa-download"></i>
+              Downloads
+              <i class="fas fa-caret-down"></i>
+            </a>
+            <ul
+              class="downloads-dropdown-content"
+              id="downloadsDropdown"
+            >
+              <li>
+                <!-- Example E-Poster PDF -->
+                <a href="{{ url_for('download_file', filename='E-Poster-FDP.pdf') }}">
+                  <i class="fas fa-file-pdf"></i>
+                  Download E-Poster
+                </a>
+              </li>
+              <li>
+                <!-- Example Topics DOCX -->
+                <a href="{{ url_for('download_file', filename='Topics.docx') }}">
+                  <i class="fas fa-file-word"></i>
+                  Download Program Schedule
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Right Logo -->
+      <img
+        src="{{ url_for('static', filename='images/heritage_logo.png') }}"
+        alt="Heritage Institute Logo"
+        class="right-logo"
+      />
+    </div>
+  </header>
+
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 FDP. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Inline Script to handle mobile nav and downloads dropdown -->
+  <script>
+    function toggleMobileNav() {
+      const navMenu = document.getElementById('nav-menu');
+      navMenu.classList.toggle('nav-open');
+    }
+
+    function toggleDownloads(event) {
+      event.preventDefault();
+      const dropdownContent = document.getElementById('downloadsDropdown');
+      dropdownContent.classList.toggle('show');
+    }
+
+    // Close the dropdown if clicking outside
+    document.addEventListener('click', function(e) {
+      const dropdownContent = document.getElementById('downloadsDropdown');
+      const downloadsBtn = document.getElementById('downloadsToggle');
+      if (
+        dropdownContent &&
+        !dropdownContent.contains(e.target) &&
+        !downloadsBtn.contains(e.target)
+      ) {
+        dropdownContent.classList.remove('show');
+      }
+    });
+  </script>
 </body>
 </html>

@@ -2,63 +2,137 @@
 
 {% block content %}
 <div class="hero">
-    <div class="hero-content">
-        <img src="{{ url_for('static', filename='images/iiit_hyderabad_logo.png') }}" alt="IIIT Hyderabad Logo" class="institute-logo">
-        <img src="{{ url_for('static', filename='images/heritage_logo.png') }}" alt="Heritage Institute Logo" class="institute-logo">
-        <h1>Heritage Institute of Technology (HIT), Kolkata</h1>
-        <h2>Jointly with</h2>
-        <h1>International Institute of Information Technology (IIIT), Hyderabad</h1>
-        <h2>Organizes</h2>
-        <h1>Five Days Online Faculty Development Program On</h1>
-        <h2>"Computational Genomics: Path to Precision Medicine"</h2>
-        <h3>24th – 28th March 2025</h3>
-        <h3>Time: 19.00 – 22.00 hrs (IST)</h3>
-        <h3>Venue: Zoom Meet</h3>
-        <a href="https://www.theheritage.ac.in/Events/CGPPM.aspx" class="cta-button" target="_blank">Register Now</a>
-        <a href="{{ url_for('download_file', filename='E-Poster-FDP.pdf') }}" class="cta-button">Download E-Poster</a>
+  <div class="hero-content">
+    <!-- Title/Logos in hero -->
+    <div
+      class="institutes"
+      style="
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        flex-wrap: wrap;
+      "
+    >
+      <!-- If you want bigger hero logos, you can adjust style below
+      <img
+        src="{{ url_for('static', filename='images/iiit_hyderabad_logo.png') }}"
+        alt="IIIT Hyderabad Logo"
+        class="institute-logo"
+        style="height: 130px;"
+      />
+      <img
+        src="{{ url_for('static', filename='images/heritage_logo.png') }}"
+        alt="Heritage Logo"
+        class="institute-logo"
+        style="height: 130px;"
+      /> -->
+      <h1
+        style="
+          text-align: center;
+          font-size: 2.25rem;
+        "
+      >
+        Heritage Institute of Technology, Kolkata &amp;
+      </h1>
+      <h1
+        style="
+          text-align: center;
+          font-size: 2.25rem;
+        "
+      >
+        International Institute of Information Technology,
+        Hyderabad
+      </h1>
     </div>
+
+    <h3>Organize</h3>
+    <h2>Five Days Online Faculty Development Program On</h2>
+    <br />
+    <h1
+        style="
+          text-align: center;
+          font-size: 3.25rem;
+        "
+      >
+    Computational Genomics: Path to Precision Medicine</h1>
+    <br />
+    <h2>24th – 28th March 2025</h2>
+    <h2>Time: 19.00 – 22.00 hrs (IST)</h2>
+    <h2>Venue: Zoom Meet</h2>
+    <a
+      href="https://www.theheritage.ac.in/Events/CGPPM.aspx"
+      class="cta-button"
+      target="_blank"
+      >Register Now</a
+    >
+  </div>
 </div>
 
 <section class="about container">
-    <h2>About FDP</h2>
-    <p>Interdisciplinary research plays a vital role in advancing healthcare. The FDP on "Computational Genomics: Path to Precision Medicine" aims to provide a unique collaborative platform for aspiring researchers and experts in Genomics and Epigenomics. The FDP will facilitate knowledge exchange among Academicians, Industry leaders, and Medical Practitioners from over the world, focusing on emerging trends and addressing practical challenges in genomics. By exploring new dimensions in this field, the FDP seeks to drive innovation and contribute to societal well-being.</p>
-    <br>
-    <br>
+  <h2>About the FDP</h2>
+  <p>
+    Interdisciplinary research plays a vital role in advancing healthcare. The
+    FDP on "Computational Genomics: Path to Precision Medicine" aims to provide
+    a unique collaborative platform for aspiring researchers and experts in
+    Genomics and Epigenomics. The FDP will facilitate knowledge exchange among
+    Academicians, Industry leaders, and Medical Practitioners from over the
+    world, focusing on emerging trends and addressing practical challenges in
+    genomics. By exploring new dimensions in this field, the FDP seeks to drive
+    innovation and contribute to societal well-being.
+  </p>
+  <br />
 
-    <h2>About IIIT Hyderabad</h2>
-    <p>International Institute of Information Technology, Hyderabad (IIITH) is an autonomous university, founded as a not-for-profit public private partnership (N-PPP) in 1998, and is the first IIIT in India under this model. Over the years, the institute has evolved strong research programmes in various areas, with an emphasis on technology and applied research for industry and society. The institute facilitates interdisciplinary research and a seamless flow of knowledge.
-        Center for Computational Natural Sciences and Bioinformatics is one of the domain research centers at IIIT. The CCNSB faculty are actively engaged in innovative research problems in various areas of physics, chemistry and biology. 
-    </p>
-    <br>
-    <br>
+  <h2>About IIIT Hyderabad</h2>
+  <p>
+    International Institute of Information Technology, Hyderabad (IIITH) is an
+    autonomous university, founded as a not-for-profit public private
+    partnership (N-PPP) in 1998, and is the first IIIT in India under this
+    model. Over the years, the institute has evolved strong research programmes
+    in various areas, with an emphasis on technology and applied research for
+    industry and society. The institute facilitates interdisciplinary research
+    and a seamless flow of knowledge. Center for Computational Natural Sciences
+    and Bioinformatics is one of the domain research centers at IIIT. The CCNSB
+    faculty are actively engaged in innovative research problems in various
+    areas of physics, chemistry and biology.
+  </p>
+  <br />
 
-    <h2>About HIT</h2>
-    <p>Heritage Institute of Technology (HITK), established in 2001 under the aegis of the Kalyan Bharti Trust (KBT), is a premier autonomous institute in Kolkata dedicated to excellence in higher education. KBT, founded in 1990 by 22 visionary industrialists in Kolkata, aims to promote quality education in India, particularly in West Bengal. HITK is affiliated with Maulana Abul Kalam Azad University of Technology (MAKAUT) and offers 13 undergraduate and 7 postgraduate programs in various engineering disciplines. The institute is accredited by the National Assessment and Accreditation Council (NAAC) with a Grade ‘A’, and most of its eligible courses are accredited by the National Board of Accreditation (NBA-Tier 1). Recognized for its outstanding performance, HITK was one of 17 private institutions receiving additional grants under the TEQIP-II scheme.
-            The institute emphasizes hands-on training, cutting-edge research, and state-of-the-art infrastructure, fostering innovation and excellence. HITK is home to initiatives like the IEEE EDS Centre of Excellence and the Centre for Advanced Biomedical Research, which drive interdisciplinary research. Collaborations with premier academic institutions and industries at both national and international levels further enhance its academic and research ecosystem. HITK’s alumni are a testament to its legacy, contributing significantly to top-tier companies and renowned universities worldwide, thereby upholding the institute's reputation. With a strong commitment to academic excellence, innovation, and industry integration, HITK continues to play a pivotal role in shaping the future of higher education in India.
-    </p>
-</section>
-
-<section class="topics container">
-    <h2>Key Focus Area</h2>
-    <div class="topic-grid">
-        <div class="topic-item"><i class="fas fa-chart-bar"></i> Understand the role of AI in genome analyses and its application in clinical genomics and diagnostics</div>
-        <div class="topic-item"><i class="fas fa-dna"></i> Harness the power of OMICS in health analytics</div>
-        <div class="topic-item"><i class="fas fa-laptop-code"></i> Gain insights on diverse computational approaches for role of genetic variations in tumorigenesis</div>
-        <div class="topic-item"><i class="fas fa-brain"></i> Explore the future of AI in precision medicine</div>
-    </div>
-</section>
-
-<section class="who-should-attend container">
-    <h2>Who Should Attend</h2>
-    <ul>
-        <li>Faculty/Scientists </li>
-        <li>Industry Personals</li>
-        <li>Research Scholars/ Post-Doctoral Scholars/Students (with Science/Engineering/Medical background)</li>
-    </ul>
+  <h2>About HIT</h2>
+  <p>
+    Heritage Institute of Technology (HITK), established in 2001 under the aegis
+    of the Kalyan Bharti Trust (KBT), is a premier autonomous institute in
+    Kolkata dedicated to excellence in higher education. KBT, founded in 1990 by
+    22 visionary industrialists in Kolkata, aims to promote quality education in
+    India, particularly in West Bengal. HITK is affiliated with Maulana Abul
+    Kalam Azad University of Technology (MAKAUT) and offers 13 undergraduate and
+    7 postgraduate programs in various engineering disciplines. The institute is
+    accredited by the National Assessment and Accreditation Council (NAAC) with
+    a Grade ‘A’, and most of its eligible courses are accredited by the National
+    Board of Accreditation (NBA-Tier 1). Recognized for its outstanding
+    performance, HITK was one of 17 private institutions receiving additional
+    grants under the TEQIP-II scheme. The institute emphasizes hands-on
+    training, cutting-edge research, and state-of-the-art infrastructure,
+    fostering innovation and excellence. HITK is home to initiatives like the
+    IEEE EDS Centre of Excellence and the Centre for Advanced Biomedical
+    Research, which drive interdisciplinary research. Collaborations with
+    premier academic institutions and industries at both national and
+    international levels further enhance its academic and research ecosystem.
+    HITK’s alumni are a testament to its legacy, contributing significantly to
+    top-tier companies and renowned universities worldwide, thereby upholding
+    the institute's reputation. With a strong commitment to academic excellence,
+    innovation, and industry integration, HITK continues to play a pivotal role
+    in shaping the future of higher education in India.
+  </p>
 </section>
 
 <section class="cta container">
-    <h2>Join Us at FDP 2025</h2>
-    <a href="https://www.theheritage.ac.in/Events/CGPPM.aspx" class="cta-button" target="_blank">Register Now</a>
+  <h2>Join Us at FDP 2025</h2>
+  <a
+    href="https://www.theheritage.ac.in/Events/CGPPM.aspx"
+    class="cta-button"
+    target="_blank"
+    >Register Now</a
+  >
 </section>
 {% endblock %}
