@@ -44,7 +44,7 @@ header {
 
 /* This wrapper to keep content centered with bigger margins */
 .header-content {
-    width: 80%; /* Control overall width of the nav + logos */
+    width: 85%; /* Control overall width of the nav + logos */
     margin: 0 auto;
     display: flex;
     align-items: center;
