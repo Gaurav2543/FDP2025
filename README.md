@@ -93,6 +93,5 @@ python app.py
 ## Contributors
 
 - **Gaurav Bhole** - Developer & Maintainer
-- Additional contributors can be listed here.
 
 ---
