@@ -36,7 +36,7 @@ FDP2025/
 │   ├── contact.html
 │── others/
 │   ├── E-Poster-FDP.pdf
-│   ├── Topics.docx (Program Schedule)
+│   ├── Schedule-Topics.docx (Program Schedule)
 │── app.py
 │── requirements.txt
 │── Procfile
