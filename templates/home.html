@@ -3,86 +3,26 @@
 {% block content %}
 <div class="hero">
   <div class="hero-content">
-    <!-- Title/Logos in hero -->
-    <div
-      class="institutes"
-      style="
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 20px;
-        flex-wrap: wrap;
-      "
-    >
-      <!-- If you want bigger hero logos, un-comment and adjust style below
-      <img
-        src="{{ url_for('static', filename='images/iiit_hyderabad_logo.png') }}"
-        alt="IIIT Hyderabad Logo"
-        class="institute-logo"
-        style="height: 130px;"
-      />
-      <img
-        src="{{ url_for('static', filename='images/heritage_logo.png') }}"
-        alt="Heritage Logo"
-        class="institute-logo"
-        style="height: 130px;"
-      />
-      -->
-      <h1
-        style="
-          text-align: center;
-          font-size: 2.25rem;
-        "
-      >
-        Heritage Institute of Technology, Kolkata
-      </h1>
+    <div class="institutes" style="display: flex; justify-content: center; align-items: center; gap: 20px; flex-wrap: wrap;">
+      <h1 style="text-align: center; font-size: 2rem;">Heritage Institute of Technology, Kolkata</h1>
     </div>
-
-    <h3>jointly with</h3>
     
-    <div
-      class="institutes"
-      style="
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 20px;
-        flex-wrap: wrap;
-      "
-    >
-      <h1
-        style="
-          text-align: center;
-          font-size: 2.25rem;
-        "
-      >
-        International Institute of Information Technology,
-        Hyderabad
-      </h1>
+    <h3>and</h3>
+    
+    <div class="institutes" style="display: flex; justify-content: center; align-items: center; gap: 20px; flex-wrap: wrap;">
+      <h1 style="text-align: center; font-size: 2rem;">International Institute of Information Technology, Hyderabad</h1>
     </div>
 
-    <h3>Organizes</h3>
-    <h2>Five Days Online Faculty Development Program On</h2>
+    <h3>Jointly Organizes</h3>
+    <h2 style="text-align: center; font-size: 2rem;">Five Days Online Faculty Development Program</h2>
+    <h3>On</h3>
+  
+    <h1 style="text-align: center; font-size: 2.5rem;">Computational Genomics: Path to Precision Medicine</h1>
     <br>
-    <h1
-        style="
-          text-align: center;
-          font-size: 3rem;
-        "
-    >
-      Computational Genomics: Path to Precision Medicine
-    </h1>
-    <br>
-    <h2>24th – 28th March 2025</h2>
-    <h2>Time: 19.00 – 22.00 hrs (IST)</h2>
-    <h2>Venue: Zoom Meet</h2>
-    <a
-      href="https://www.theheritage.ac.in/Events/CGPPM.aspx"
-      class="cta-button"
-      target="_blank"
-    >
-      Register Now
-    </a>
+    <h2 style="text-align: center; font-size: 1.75rem;">24th – 28th March 2025</h2>
+    <h2 style="text-align: center; font-size: 1.75rem;">Time: 19.00 – 22.00 hrs (IST)</h2>
+    <h2 style="text-align: center; font-size: 1.75rem;">Venue: Zoom Meet</h2>
+    <a href="https://www.theheritage.ac.in/Events/CGPPM.aspx" class="cta-button" target="_blank">Register Now</a>
   </div>
 </div>
 
@@ -100,6 +40,7 @@
     drive innovation and contribute to societal well-being.
   </p>
   <br>
+  <br>
 
   <h2>About IIITH</h2>
   <p>
@@ -114,6 +55,7 @@
     innovative research problems in various areas of physics, chemistry and
     biology.
   </p>
+  <br>
   <br>
 
   <h2>About HIT</h2>
@@ -141,11 +83,11 @@
     academic excellence, innovation, and industry integration, HITK continues to
     play a pivotal role in shaping the future of higher education in India.
   </p>
+</section>
 
-  <br>
-  <br>
-  <h2>Key Focus Area</h2>
-  <ul style="margin: 0 auto; max-width: 700px; line-height: 1.6;">
+<section class="info container" style="margin-top: -70px;">
+  <h2>Key Focus Areas</h2>
+  <ul style="text-align: left; list-style-type: disc; padding-left: 20px;">
     <li>Understand the role of AI in genome analyses and its application in clinical genomics and diagnostics</li>
     <li>Gain insights on diverse computational approaches for role of genetic variations in tumorigenesis</li>
     <li>Explore the future of AI in precision medicine</li>
@@ -155,26 +97,16 @@
   <br>
   <br>
   <h2>Who Should Attend</h2>
-  <p style="text-align: center;">
-    The FDP is appropriate for all research enthusiasts. This FDP is primarily
-    meant for, though not limited to:
-  </p>
-  <ul style="margin: 0 auto; max-width: 700px; line-height: 1.6;">
+  <p>The FDP is appropriate for all research enthusiasts. This FDP is primarily meant for, though not limited to:</p>
+  <ul style="text-align: left; list-style-type: disc; padding-left: 20px;">
     <li>Faculty/Scientists</li>
-    <li>Industry Personals</li>
-    <li>Research Scholars / Post-Doctoral Scholars / Students (with Science/Engineering/Medical background)</li>
+    <li>Industry Personnel</li>
+    <li>Research Scholars/Post-Doctoral Scholars/Students (with Science/Engineering/Medical background)</li>
   </ul>
 </section>
 
-<!-- CTA -->
 <section class="cta container">
   <h2>Join Us at FDP 2025</h2>
-  <a
-    href="https://www.theheritage.ac.in/Events/CGPPM.aspx"
-    class="cta-button"
-    target="_blank"
-  >
-    Register Now
-  </a>
+  <a href="https://www.theheritage.ac.in/Events/CGPPM.aspx" class="cta-button" target="_blank">Register Now</a>
 </section>
 {% endblock %}
