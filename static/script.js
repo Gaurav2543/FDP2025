@@ -1,4 +1,4 @@
-// Sample course data
+// Data
 const courses = [
     "Introduction to Genomics",
     "Bioinformatics Tools and Techniques",
@@ -9,7 +9,7 @@ const courses = [
     "Metagenomics and Microbiome Analysis"
 ];
 
-// Sample schedule data
+// Schedule data
 const schedule = [
     { date: "June 1, 2025", course: "Introduction to Genomics", instructor: "Dr. Jane Smith" },
     { date: "June 15, 2025", course: "Bioinformatics Tools and Techniques", instructor: "Prof. John Doe" },
